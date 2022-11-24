@@ -6,6 +6,8 @@ import Rating from "@material-ui/lab/rating";
 
 import useStyles from "./styles";
 
+const apiKey = process.env.API_KEY;
+
 const Map = ({
   setCoordinates,
   setBounds,
@@ -19,7 +21,7 @@ const Map = ({
   return (
     <div className={classes.mapContainer}>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyAhF0i4TZFehI17_--lGqMcmUt4IxYK7lg" }}
+        bootstrapURLKeys={{ key: apiKey }}
         defaultCenter={coordinates}
         center={coordinates}
         defaultZoom={14}
